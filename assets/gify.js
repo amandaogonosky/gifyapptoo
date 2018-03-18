@@ -6,17 +6,34 @@ var topics;
 
 // function
 //  gify params: q, limit, rating
-// for (var i =0; i< arr.length -1; i++){
-//     for (var j=0; j<arr.lenghty-1; j++){
-//    if (arr[j] >arr[j+1];
-//    arr[j+1] =arr[j];
-//    arr[j] =temp;
-//    }
-//    }
-// //    ]
-   
-// event
-// cyU2OBRcwA8cePhq5korZnRYv2sFFzqx
+
+var xhr = $.get("https://api.giphy.com/v1/gifs/search?q=cats&api_key=cyU2OBRcwA8cePhq5korZnRYv2sFFzqx&limit=10");
+xhr.done(function(data) { console.log("success got data", data); });
+				
+var giffy = ["cat", "kitten","rainbow"];
+  function renderButtons() {
+  $("#find-gif").empty();
+
+for (var i =0; i< giffy.lenght; i++){
+ var a = $("<button>");
+ a.addClass("giffy");
+ a.attr("data-name",giffy[i]);
+ a.text(gifButton[i]);
+
+ $("#giffy-button").append(a);
+
+    } 
+  }
+$("#giftop").on("click",function(event){
+event.preventDefault();
+
+var giffy = $("#gif-form").val().trim();
+giffy.push(giffy);
+
+});
+
+renderButtons();
+// });
 
 // $.ajax()({
 //     url =queryURL,
@@ -26,7 +43,7 @@ var topics;
 // })
 
 
-$("#giftop").click(function(){
-    // $("#giftop").console
-console.log(gifButton);
-});
+// $("#giftop").click(function(){
+//     // $("#giftop").console
+// console.log(gifButton);
+// });

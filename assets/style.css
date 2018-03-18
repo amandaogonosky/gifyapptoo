@@ -8,8 +8,8 @@ background-color: blanchedalmond;
 
  }
 .container{
-height: 800px;
-width: 800px;
+height: 100%100%;
+width: 100%;
 background-color: aliceblue;
 }
 #giftop{
@@ -28,10 +28,7 @@ text-decoration-color: aliceblue;
 }
 #gif-form{
 
-/* label{
 
-
-} */
 
 }
 
