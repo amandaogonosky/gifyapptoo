@@ -53,7 +53,7 @@ for (i=0; i <response.data.length; i++){
   var gifStill =response.data[i].images.fixed_height_still.url;
   var gifs =$("<img>").addClass("anyGif")
   .attr("src", gifStill).attr("gifMove", gifMove).attr("gifStill", gifStill).attr("data-state", "still")
-  $(".gif-views").append(gifs);
+  $(".gif-views").prepend(gifs);
 
 }
 
